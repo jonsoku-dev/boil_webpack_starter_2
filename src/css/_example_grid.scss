@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  height: 100vh;
+  gap: 10px;
+  // grid-template:
+  //   'header header' 100px
+  //   'aside  main' 1fr
+  //   'footer footer' 100px / 1fr 4fr;
+  grid-template-areas:
+    'header header'
+    'aside  main'
+    'footer footer';
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr 4fr;
+}
+
+.header {
+  grid-area: header;
+  background: #fdf;
+}
+
+.aside {
+  grid-area: aside;
+  background: #dff;
+}
+
+.main {
+  grid-area: main;
+  background: #ddd;
+}
+
+.footer {
+  grid-area: footer;
+  background: #ffd;
+}
