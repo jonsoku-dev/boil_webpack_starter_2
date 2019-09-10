@@ -1,1 +1,6 @@
-@import './example_flex';
+@import "./example_flex";
+
+.foo {
+  font-size: responsive;
+  font-family: "Noto Sans JP", sans-serif;
+}
