@@ -1,22 +1,26 @@
 module.exports = () => ({
   plugins: {
     autoprefixer: { grid: true, flexbox: true },
-    "postcss-import": {},
-    "postcss-preset-env": {
-      browsers: "last 2 versions"
+    'postcss-import': {},
+    'postcss-preset-env': {
+      browsers: '> 0% in JP'
     },
-    "postcss-flexbugs-fixes": {},
-    "rucksack-css": {},
-    "postcss-font-magician": {
+    'postcss-flexbugs-fixes': { bug8a: false },
+    'rucksack-css': {},
+    'postcss-font-magician': {
       variants: {
-        "Roboto Condensed": {
-          "300": [],
-          "400": [],
-          "700": []
+        'Roboto Condensed': {
+          '300': [],
+          '400': [],
+          '700': []
         }
       },
-      foundries: ["google"]
+      foundries: ['google']
     },
-    cssnano: {}
+    cssnano: {
+      preset: ['default']
+    },
+    'postcss-combine-duplicated-selectors': true,
+    'css-declaration-sorter': { order: 'smacss' }
   }
 });

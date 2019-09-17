@@ -1,17 +1,30 @@
 {
-  "extends": "eslint:recommended",
+  // "extends": "eslint:recommended",
   "env": {
     "browser": true,
     "node": true,
     "es6": true
   },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
+  // "parserOptions": {
+  //   "ecmaVersion": 6,
+  //   "sourceType": "module"
+  // },
+  "plugins": ["compat"],
   "rules": {
     "no-console": "off",
     "strict": ["error", "global"],
-    "curly": "warn"
+    "curly": "warn",
+    "compat/compat": "warn",
+    "import/newline-after-import": 0
+  },
+
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   }
 }
